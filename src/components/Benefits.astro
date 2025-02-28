@@ -1,0 +1,26 @@
+---
+import { Icon } from 'astro-icon/components'
+
+const benefits = [
+	{ icon: 'mdi:ticket-percent', title: 'Descuentos en reserva de pistas' },
+	{ icon: 'mdi:tennis-ball-outline', title: 'Reserva de pistas cedidas al club' },
+	{ icon: 'mdi:trophy', title: 'Acceso a eventos y competiciones internas' },
+	{ icon: 'mdi:tennis', title: 'Jugadores y jugadoras de todos los niveles' },
+	{ icon: 'mdi:whatsapp', title: 'Grupos de WhatsApp para partidos' },
+	{ icon: 'mdi:wallet-bifold', title: 'Cuota de socio muy económica' },
+];
+---
+
+<section id="beneficios" class="py-16 bg-gray-100">
+	<div class="container mx-auto px-4">
+		<h2 class="text-3xl font-bold text-center mb-12">Ventajas de ser socio</h2>
+		<div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+			{benefits.map(benefit => (
+				<div class="flex items-center space-x-4 p-6 bg-white rounded-lg shadow-md hover:shadow-lg hover:bg-gray-200 transform hover:scale-100 hover:-translate-y-1 transition duration-300 ease-in-out">
+					<Icon name={benefit.icon} class="w-18 h-12 text-primary" />
+					<p class="text-lg font-semibold">{benefit.title}</p>
+				</div>
+			))}
+		</div>
+	</div>
+</section>

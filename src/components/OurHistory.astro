@@ -1,0 +1,18 @@
+---
+const clubHistory = {
+  title: "Nuestra Historia",
+  description: "Nuestro club con 11 años de historia se fundó para agrupar a toda la gente del barrio para compartir"
+  + "este deporte y ayudar a que todos los vecinos tuvieran un ambiente divertido en el que "
+  + "conseguir partidos y conocer gente. Hoy en día organizamos torneos de todos los niveles "
+  + "con jugadores de toda la provincia."
+};
+---
+
+<section class="py-16 bg-gray-100">
+  <div class="container mx-auto px-4 text-center">
+    <h2 class="text-3xl font-bold mb-6">{clubHistory.title}</h2>
+    <img src={"/logo-club-padel-pino-montano.png"} alt="Historia del club" class="mx-auto mb-6">
+    <p class="text-lg mb-8">{clubHistory.description}</p>
+    <a href="#inscripcion" class="bg-primary text-white py-3 px-6 rounded-lg transition duration-300">Únete a Nosotros</a>
+  </div>
+</section>

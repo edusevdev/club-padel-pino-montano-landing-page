@@ -1,0 +1,25 @@
+---
+import { Icon } from 'astro-icon/components'
+---
+
+<header class="bg-primary text-white py-4 px-6 fixed w-full z-11">
+	<div class="container mx-auto flex justify-between items-center">
+		<a href="/" class="text-2xl font-bold">
+			<img src="/logo-club-padel-pino-montano.png" alt="Club de Padel Pino Montano" class="h-10">
+		</a>
+		<nav class="hidden md:flex space-x-6">
+			<a href="#inicio" class="hover:text-secondary">Inicio</a>
+			<a href="#beneficios" class="hover:text-secondary">Beneficios</a>
+			<a href="#eventos" class="hover:text-secondary">Eventos</a>
+			<a href="#sobre-nosotros" class="hover:text-secondary">Sobre Nosotros</a>
+			<a href="#contacto" class="hover:text-secondary">Contacto</a>
+		</nav>
+		<button class="bg-secondary text-primary font-bold py-2 px-4 rounded hover:bg-yellow-400 transition duration-300">
+			ÚNETE AHORA
+		</button>
+		<button class="md:hidden">
+			<Icon name="mdi:menu" class="w-6 h-6" />
+		</button>
+	</div>
+</header>
+

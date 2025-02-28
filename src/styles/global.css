@@ -1,0 +1,36 @@
+@import "tailwindcss";
+
+@theme {
+  --color-primary: '#00008B';
+  --color-secondary: '#FFD700'
+}
+
+body {
+  font-family: 'Arial', sans-serif;
+}
+
+/* Estilos adicionales personalizados */
+.hero-section {
+  background-image: url('/hero-image.png');
+  background-size: cover;
+  background-position: center;
+}
+
+.btn {
+  @apply font-bold py-2 px-4 rounded transition duration-300;
+}
+
+.btn-primary {
+  @apply bg-[#00008B] text-white hover:bg-blue-700;
+}
+
+.btn-secondary {
+  @apply bg-[#FFD700] text-[#00008B] hover:bg-yellow-400;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .hero-section {
+    background-position: top;
+  }
+}

@@ -1,0 +1,25 @@
+---
+const facilities = [
+	{ image: '/logo-club-padel-pino-montano.png', title: 'Liga Club Padel Pino Montano' },
+	{ image: '/logo-club-padel-pino-montano.png', title: 'Torneo Blanca Paloma' },
+	{ image: '/logo-club-padel-pino-montano.png', title: 'Torneo Transilvania' },
+	{ image: '/logo-club-padel-pino-montano.png', title: 'Celebraciones tras competición' },
+];
+---
+
+<section id="eventos" class="py-16">
+	<div class="container mx-auto px-4">
+		<h2 class="text-3xl font-bold text-center mb-12">Eventos y competiciones</h2>
+		<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+			{facilities.map(facility => (
+				<div class="relative overflow-hidden rounded-lg shadow-md">
+					<img src={facility.image || "/placeholder.svg"} alt={facility.title} class="w-full h-64 object-cover">
+					<div class="absolute inset-0 bg-black bg-opacity-50 flex items-center justify-center opacity-0 hover:opacity-100 transition duration-300">
+						<h3 class="text-white text-xl font-bold">{facility.title}</h3>
+					</div>
+				</div>
+			))}
+		</div>
+	</div>
+</section>
+
