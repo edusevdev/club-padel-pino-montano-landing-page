@@ -4,9 +4,11 @@ import { Icon } from 'astro-icon/components'
 
 <header class="bg-primary text-white py-4 px-6 fixed w-full z-11">
 	<div class="container mx-auto flex justify-between items-center">
-		<a href="/" class="text-2xl font-bold">
+		<a href="#contact" class="text-2xl font-bold">
 			<img src="/logo-club-padel-pino-montano.png" alt="Club de Padel Pino Montano" class="h-10">
 		</a>
+
+		<!-- Menú para pantallas grandes, horizontal -->
 		<nav class="hidden md:flex space-x-6">
 			<a href="#inicio" class="hover:text-secondary">Inicio</a>
 			<a href="#beneficios" class="hover:text-secondary">Beneficios</a>
@@ -14,12 +16,43 @@ import { Icon } from 'astro-icon/components'
 			<a href="#our-history" class="hover:text-secondary">Sobre Nosotros</a>
 			<a href="#contacto" class="hover:text-secondary">Contacto</a>
 		</nav>
-		<a href="#contacto" class="bg-secondary text-primary font-bold py-2 px-4 rounded-lg text-lg hover:bg-secondary hover:text-primary transition duration-300">
+
+		<!-- Botón ÚNETE AHORA solo para pantallas grandes -->
+		<a href="#contacto" class="hidden md:inline bg-secondary text-primary font-bold py-2 px-4 rounded-lg text-lg hover:bg-secondary hover:text-primary transition duration-300">
 			ÚNETE AHORA
 		</a>
-		<button class="md:hidden">
-			<Icon name="mdi:menu" class="w-6 h-6" />
-		</button>
+
+		<!-- Contenedor para el menú móvil y el botón ÚNETE AHORA (en móvil) -->
+		<div class="flex items-center md:hidden ml-auto">
+			<!-- Botón ÚNETE AHORA solo para pantallas pequeñas -->
+			<a href="#contacto" class="mr-5 bg-secondary text-primary font-bold py-2 px-4 rounded-lg text-lg hover:bg-secondary hover:text-primary transition duration-300">
+				ÚNETE AHORA
+			</a>
+
+			<!-- Botón hamburguesa para pantallas pequeñas -->
+			<button class="mr-4" id="hamburger-btn">
+				<Icon name="mdi:menu" class="w-6 h-6" />
+			</button>
+		</div>
+
+		<!-- Menú móvil, visible solo en pantallas pequeñas -->
+		<div id="mobile-menu" class="md:hidden hidden absolute top-full left-0 right-0 bg-primary text-white p-6 space-y-4 rounded-b-lg border-2 border-black">
+			<a href="#inicio" class="hover:text-secondary block py-2">Inicio</a>
+			<a href="#beneficios" class="hover:text-secondary block py-2">Beneficios</a>
+			<a href="#eventos" class="hover:text-secondary block py-2">Eventos</a>
+			<a href="#our-history" class="hover:text-secondary block py-2">Sobre Nosotros</a>
+			<a href="#contacto" class="hover:text-secondary block py-2">Contacto</a>
+		</div>
 	</div>
 </header>
 
+<script>
+	// Obtener el botón de hamburguesa y el menú móvil
+	const hamburgerBtn = document.getElementById('hamburger-btn');
+	const mobileMenu = document.getElementById('mobile-menu');
+
+	// Agregar un listener al botón para alternar la visibilidad del menú móvil
+	hamburgerBtn.addEventListener('click', () => {
+		mobileMenu.classList.toggle('hidden');
+	});
+</script>
