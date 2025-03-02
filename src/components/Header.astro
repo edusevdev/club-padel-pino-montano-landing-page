@@ -8,7 +8,7 @@ import { Icon } from 'astro-icon/components'
 			<img src="/logo-club-padel-pino-montano.png" alt="Club de Padel Pino Montano" class="h-10">
 		</a>
 
-		<!-- Menú para pantallas grandes, horizontal -->
+		<!-- Menu for large screens, horizontal -->
 		<nav class="hidden md:flex space-x-6">
 			<a href="#inicio" class="hover:text-secondary">Inicio</a>
 			<a href="#beneficios" class="hover:text-secondary">Beneficios</a>
@@ -17,25 +17,25 @@ import { Icon } from 'astro-icon/components'
 			<a href="#contacto" class="hover:text-secondary">Contacto</a>
 		</nav>
 
-		<!-- Botón ÚNETE AHORA solo para pantallas grandes -->
+		<!-- "JOIN NOW" button only for large screens -->
 		<a href="#contacto" class="hidden md:inline bg-secondary text-primary font-bold py-2 px-4 rounded-lg text-lg hover:bg-secondary hover:text-primary transition duration-300">
 			ÚNETE AHORA
 		</a>
 
-		<!-- Contenedor para el menú móvil y el botón ÚNETE AHORA (en móvil) -->
+		<!-- Container for the mobile menu and the "JOIN NOW" button (for mobile) -->
 		<div class="flex items-center md:hidden ml-auto">
-			<!-- Botón ÚNETE AHORA solo para pantallas pequeñas -->
+			<!-- "JOIN NOW" button only for small screens -->
 			<a href="#contacto" class="mr-5 bg-secondary text-primary font-bold py-2 px-4 rounded-lg text-lg hover:bg-secondary hover:text-primary transition duration-300">
 				ÚNETE AHORA
 			</a>
 
-			<!-- Botón hamburguesa para pantallas pequeñas -->
+			<!-- Hamburger button for small screens -->
 			<button class="mr-4" id="hamburger-btn">
 				<Icon name="mdi:menu" class="w-6 h-6" />
 			</button>
 		</div>
 
-		<!-- Menú móvil, visible solo en pantallas pequeñas -->
+		<!-- Mobile menu, visible only on small screens -->
 		<div id="mobile-menu" class="md:hidden hidden absolute top-full left-0 right-0 bg-primary text-white p-6 space-y-4 rounded-b-lg border-2 border-black">
 			<a href="#inicio" class="hover:text-secondary block py-2">Inicio</a>
 			<a href="#beneficios" class="hover:text-secondary block py-2">Beneficios</a>
@@ -47,12 +47,20 @@ import { Icon } from 'astro-icon/components'
 </header>
 
 <script>
-	// Obtener el botón de hamburguesa y el menú móvil
+	// Get the hamburger button and the mobile menu
 	const hamburgerBtn = document.getElementById('hamburger-btn');
 	const mobileMenu = document.getElementById('mobile-menu');
+	const menuItems = mobileMenu.querySelectorAll('a');
 
-	// Agregar un listener al botón para alternar la visibilidad del menú móvil
+	// Add a listener to the hamburger button to toggle the visibility of the mobile menu
 	hamburgerBtn.addEventListener('click', () => {
 		mobileMenu.classList.toggle('hidden');
+	});
+
+	// Add event listeners to each menu item to close the menu when clicked
+	menuItems.forEach(item => {
+		item.addEventListener('click', () => {
+			mobileMenu.classList.add('hidden');
+		});
 	});
 </script>

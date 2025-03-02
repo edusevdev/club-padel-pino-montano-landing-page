@@ -23,6 +23,7 @@
 - Subir a Vercel
 - Agregar sección de contacto
 - Meter iconos redes sociales
+- Hacer menú responsivo
 
 ---
 ✏️ **Nota:** Agregar nuevas tareas conforme avancen los requerimientos.
