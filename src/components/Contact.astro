@@ -1,0 +1,29 @@
+---
+import { Icon } from 'astro-icon/components'
+---
+
+<section id="contacto" class="py-16">
+	<div class="container mx-auto px-4 text-center">
+	  <h2 class="text-3xl font-bold mb-6 relative inline-block">
+	    Contacta con nosotros
+	    <span class="absolute -left-8 top-1/2 transform -translate-y-1/2 animate-bounce">
+	      <Icon name="mdi:arrow-right" class="w-6 h-6 text-blue-500" />
+	    </span>
+	    <span class="absolute -right-8 top-1/2 transform -translate-y-1/2 animate-bounce">
+	      <Icon name="mdi:arrow-left" class="w-6 h-6 text-blue-500" />
+	    </span>
+	  </h2>
+	  
+	  <p class="text-lg mb-4">Si deseas ponerte en contacto con nosotros hazlo a través de nuestras redes sociales o envíanos un correo a:</p>
+	  <a href="mailto:info@gmail.com" class="text-blue-500 text-xl font-semibold hover:underline">
+		info@gmail.com
+	  </a>
+	  
+	  <!-- Redes Sociales -->
+	  <div class="flex justify-center space-x-6 mt-6">
+		<a href="#" class="hover:text-secondary"><Icon name="mdi:facebook" class="w-15 h-15" /></a>
+		<a href="#" class="hover:text-secondary"><Icon name="mdi:twitter" class="w-15 h-15" /></a>
+		<a href="#" class="hover:text-secondary"><Icon name="mdi:instagram" class="w-15 h-15" /></a>
+	  </div>
+	</div>
+</section>
