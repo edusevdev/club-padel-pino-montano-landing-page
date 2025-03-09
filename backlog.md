@@ -4,11 +4,14 @@
 
 - Agregar logo e imágenes
 - Optimizar imágenes para mejorar rendimiento
-- Implementar favicon y meter tags para SEO
+- Meter favicon
 - Meter enlaces a redes sociales
 - Configurar eslint y prettier
+- Mejorar SEO
+- Configurar astro-seo
 
 ## 🚀 IN PROGRESS
+- Añadido sitemap.xml and robots.txt
 
 
 
