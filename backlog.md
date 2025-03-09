@@ -2,19 +2,16 @@
 
 ## 📌 TO DO
 
-- No funciona botón Únete ahora de menú
 - Agregar logo e imágenes
 - Optimizar imágenes para mejorar rendimiento
-- Eliminar la barra inferior de Astro
-- Agregar formulario de inscripción para nuevos socios
-- Implementar favicon y meter tags para SEO
-- Enlaces a redes sociales en el Footer
-- Meter en algún sitio más las redes sociales?
+- Meter favicon
+- Meter enlaces a redes sociales
+- Configurar eslint y prettier
+- Mejorar SEO
+- Configurar astro-seo
 
 ## 🚀 IN PROGRESS
-- Preguntar si quieren que nos contacten por correo
-    - Configurar envío de correos de formulario contacto
-- Configurar eslint y prettier
+- Añadido sitemap.xml and robots.txt
 
 
 
@@ -27,6 +24,9 @@
 - Diseñar cabecera con imagen
 - Configurar Git y subir a GitHub
 - Subir a Vercel
+- Agregar sección de contacto
+- Meter iconos redes sociales
+- Hacer menú responsivo
 
 ---
 ✏️ **Nota:** Agregar nuevas tareas conforme avancen los requerimientos.
