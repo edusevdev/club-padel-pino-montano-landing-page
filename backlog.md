@@ -8,10 +8,12 @@
 - Meter enlaces a redes sociales
 - Configurar eslint y prettier
 - Mejorar SEO
-- Configurar astro-seo
+
+- POST PaP
+    - Meter url definitiva en astro.config.mjs en el site
+    - Meter url definitiva en robots.txt
 
 ## 🚀 IN PROGRESS
-- Añadido sitemap.xml and robots.txt
 
 
 
@@ -27,6 +29,7 @@
 - Agregar sección de contacto
 - Meter iconos redes sociales
 - Hacer menú responsivo
+- Añadido sitemap.xml y robots.txt
 
 ---
 ✏️ **Nota:** Agregar nuevas tareas conforme avancen los requerimientos.
